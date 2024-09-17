@@ -12,9 +12,9 @@ Le flux RTMP généré est ensuite poussé vers une autre URL RTMP configurée.
 ####    Source FLV :
 Un fichier .flv est utilisé comme source pour créer un flux RTMP.
 ####    Diffusion :
-Le flux est d'abord diffusé à partir de l'URL locale (par exemple, rtmp://localhost:1935/live/stream).
+Le flux est d'abord diffusé à partir de l'URL locale (rtmp://localhost:1935/live/stream).
 ####    Rediffusion :
-Ce flux est ensuite poussé vers une autre URL RTMP (par exemple, rtmp://localhost:1936/live/new-stream), permettant de relayer la vidéo.
+Ce flux est ensuite poussé vers une autre URL RTMP (rtmp://localhost:1936/live/new-stream), permettant de relayer la vidéo.
 ### Cas d'Usage
 Cette solution est idéale pour des scénarios où vous devez diffuser un fichier vidéo préenregistré comme un flux en direct sur plusieurs plateformes ou serveurs de streaming.
 
