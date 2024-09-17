@@ -2,7 +2,21 @@
 Stream With RTMP
 
 ### Description
-Une brève description de ce que fait votre application, ses fonctionnalités principales et pourquoi elle est utile.
+Cette application Dockerisée utilise NGINX avec le module RTMP pour diffuser un fichier vidéo FLV via RTMP. Elle lit le fichier FLV en continu à partir d'une URL locale, puis le retransmet sur une autre URL, permettant ainsi de relayer et diffuser le contenu à des plateformes de streaming.
+
+####    Création de flux : 
+L'application lit un fichier .flv en boucle depuis un emplacement local et génère un flux RTMP à partir de celui-ci.
+####    Relayage du flux :
+Le flux RTMP généré est ensuite poussé vers une autre URL RTMP configurée.
+### Fonctionnement
+####    Source FLV :
+Un fichier .flv est utilisé comme source pour créer un flux RTMP.
+####    Diffusion :
+Le flux est d'abord diffusé à partir de l'URL locale (par exemple, rtmp://localhost:1935/live/stream).
+####    Rediffusion :
+Ce flux est ensuite poussé vers une autre URL RTMP (par exemple, rtmp://localhost:1936/live/new-stream), permettant de relayer la vidéo.
+### Cas d'Usage
+Cette solution est idéale pour des scénarios où vous devez diffuser un fichier vidéo préenregistré comme un flux en direct sur plusieurs plateformes ou serveurs de streaming.
 
 ### Prérequis
 Avant de pouvoir exécuter cette application, assurez-vous que vous avez installé les éléments suivants :
