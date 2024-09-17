@@ -23,5 +23,7 @@ EXPOSE 1936
 EXPOSE 1937
 EXPOSE 8083
 
+RUN echo "Ports 1935 and 8080 are exposed."
+
 # Use the startup script as the entrypoint
 ENTRYPOINT ["/usr/local/bin/start.sh"]
