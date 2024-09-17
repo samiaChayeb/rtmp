@@ -12,6 +12,9 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # Copy the startup script into the container
 COPY start.sh /usr/local/bin/start.sh
 
+# Copy the FLV file into the container
+COPY flv/file.flv /usr/local/flv/file.flv
+
 # Make the script executable
 RUN chmod +x /usr/local/bin/start.sh
 
