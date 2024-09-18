@@ -20,10 +20,7 @@ RUN chmod +x /usr/local/bin/start.sh
 
 # Expose the necessary ports
 EXPOSE 1936
-EXPOSE 1937
-EXPOSE 8083
+EXPOSE 8080
 
-RUN echo "Ports 1936, 1937 and 8083 are exposed."
-
-# Use the startup script as the entrypoint
-ENTRYPOINT ["/usr/local/bin/start.sh"]
+# Command to start NGINX and stream with FFmpeg
+CMD ["nginx", "-g", "daemon off;"]
