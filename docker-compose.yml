@@ -7,8 +7,12 @@ services:
       - "1936:1936"
       - "1937:1937"
       - "8083:8083"
+      - "8084:8084"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - .:/usr/share/nginx/html
+
+    command: /bin/sh -c "mkdir -p /tmp/hls && chmod -R 777 /tmp/hls && nginx -g 'daemon off;'"
 networks:
   rtmp-network:
     driver: bridge

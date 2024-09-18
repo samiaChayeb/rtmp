@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HLS Streaming Test</title>
+    <script src="assets/js/video.min.js"></script>
+</head>
+<body>
+<video id="video" width="100%" height="600" controls></video>
+<script>
+    var video = document.getElementById('video');
+    var hls = new Hls();
+    hls.loadSource('http://localhost:8083/hls/stream.m3u8');
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, function () {
+        video.play();
+    });
+    hls.on(Hls.Events.ERROR, function (event, data) {
+        console.error('HLS.js error:', data);
+    });
+</script>
+</body>
+</html>

@@ -29,9 +29,9 @@ Avant de pouvoir exécuter cette application, assurez-vous que vous avez install
     docker-compose up
 
 #### 3- lancer la commande pour streamer
-    ffmpeg -stream_loop -1 -re -i flv/file.flv -fflags +genpts -r 30 -c copy -f flv rtmp://localhost:1936/live/stream
-#####   Détails de la commande :
-    ffmpeg : Outil en ligne de commande utilisé pour traiter et convertir des fichiers multimédia et les diffuser.
+    ffmpeg -stream_loop -1 -re -i flv/file.flv -fflags +genpts -r 30 -c:v libx264 -f flv rtmp://localhost:1936/live/stream#####   Détails de la commande :
+##### ffmpeg :
+    Outil en ligne de commande utilisé pour traiter et convertir des fichiers multimédia et les diffuser.
 ##### stream_loop -1 : 
     Cette option permet de lire le fichier source en boucle. Le -1 indique que le fichier sera répété en boucle infinie.
 ##### -re : 
