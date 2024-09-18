@@ -21,3 +21,6 @@ RUN chmod +x /usr/local/bin/start.sh
 # Expose the necessary ports
 EXPOSE 1936
 EXPOSE 8080
+
+# Use the startup script as the entrypoint
+ENTRYPOINT ["/usr/local/bin/start.sh"]
