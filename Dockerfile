@@ -21,6 +21,3 @@ RUN chmod +x /usr/local/bin/start.sh
 # Expose the necessary ports
 EXPOSE 1936
 EXPOSE 8080
-
-# Command to start NGINX and stream with FFmpeg
-CMD ["nginx", "-g", "daemon off;"]
